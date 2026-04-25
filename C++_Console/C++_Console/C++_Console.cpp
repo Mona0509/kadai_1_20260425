@@ -24,17 +24,17 @@ int main()
 		// answerとinputの数値が一致している時だけ「一致!」と表示する
 		if (answer == input)
 		{
-			printf("一致!\n");
+			printf("\n一致!\n");
 			rank = 2;
 		}
 		// 入力と答えの大小の差を確認
 		else if (answer > input)
 		{
-			printf("小さいかも\n");
+			printf("\n小さいかも\n");
 		}
 		else if (answer < input)
 		{
-			printf("大きいかも\n");
+			printf("\n大きいかも\n");
 		}
 		// 入力と答えの差が-3以上3以下いないならば
 		if (num > -3 && num < 3 && num != 0)
@@ -45,14 +45,14 @@ int main()
 		switch (rank)
 		{
 		case 2:
-			printf("\nランク:S\n");
+			printf("ランク:S\n");
 			printf("\n「ゲームクリア」\n");
 			break;
 		case 1:
-			printf("\nランク:A\n");
+			printf("ランク:A\n");
 			break;
 		case 0:
-			printf("\nランク:B\n");
+			printf("ランク:B\n");
 			break;
 		}
 		if (rank != 2) 
