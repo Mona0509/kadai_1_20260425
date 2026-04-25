@@ -42,6 +42,7 @@ int main()
 			printf("惜しい!\n");
 			rank = 1;
 		}
+		// 回答によるランク付けを3段階でつける
 		switch (rank)
 		{
 		case 2:
