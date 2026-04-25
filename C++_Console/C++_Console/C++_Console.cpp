@@ -9,32 +9,34 @@ int main()
 	// 答えを固定(動作確認用)
 	//int answer = 5;
 
-	// 次はこれ
 	// コンピュータの時間(を表す値)を変数に代入する
 	int t = (int)time(nullptr);
 	// tを10で割って、その余りを変数answerに代入する
 	int answer = t % 10;
-
+	int rank = 0;
+	while (rank != 2)
+	{
 		// キーボードで押した数を変数inputに代入する
 		int input;
 		scanf_s("%d", &input);
 		// answerとinputの差を計算
 		int num = answer - input;
-		int rank = 0;
 		// answerとinputの数値が一致している時だけ「一致!」と表示する
 		if (answer == input)
 		{
 			printf("一致!\n");
 			rank = 2;
 		}
-		else if (answer > input) 
+		// 入力と答えの大小の差を確認
+		else if (answer > input)
 		{
-			printf("小さい!\n");
+			printf("小さいかも\n");
 		}
-		else if (answer < input) 
+		else if (answer < input)
 		{
-			printf("大きい!\n");
+			printf("大きいかも\n");
 		}
+		// 入力と答えの差が-3以上3以下いないならば
 		if (num > -3 && num < 3 && num != 0)
 		{
 			printf("惜しい!\n");
@@ -43,14 +45,19 @@ int main()
 		switch (rank)
 		{
 		case 2:
-			printf("ランクS\n");
+			printf("\nランク:S\n");
+			printf("\n「ゲームクリア」\n");
 			break;
 		case 1:
-			printf("ランクA\n");
+			printf("\nランク:A\n");
 			break;
 		case 0:
-			printf("ランクB\n");
+			printf("\nランク:B\n");
 			break;
 		}
-		return 0;
+		if (rank != 2) 
+		{
+			printf("\n「リトライ」\n");
+		}
+	}
 }
